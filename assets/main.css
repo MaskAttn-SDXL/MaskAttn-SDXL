@@ -1,0 +1,345 @@
+﻿:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --border: #d9dfec;
+  --text-strong: #1f2745;
+  --text: #404b6a;
+  --text-muted: #5d6787;
+  --accent: #244cd3;
+  --accent-soft: rgba(36, 76, 211, 0.08);
+  --shadow: 0 24px 48px -32px rgba(17, 24, 39, 0.35);
+  --radius: 22px;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead {
+  padding: 3.5rem 1.5rem 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.paper-card {
+  width: 100%;
+  max-width: 860px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3rem clamp(2rem, 5vw, 3.75rem);
+  text-align: center;
+}
+
+.paper-title {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 2.9rem);
+  color: var(--text-strong);
+  letter-spacing: -0.01em;
+}
+
+.paper-subtitle {
+  margin: 0.5rem auto 1.75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+  max-width: 60ch;
+}
+
+.author-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem 1.5rem;
+  color: var(--text-strong);
+  font-weight: 500;
+}
+
+.author {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.author-name {
+  color: var(--accent);
+}
+
+.author-list sup {
+  font-size: 0.65em;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.affiliation-list {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.affiliation-list span {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: baseline;
+}
+
+.affiliation-list sup {
+  font-size: 0.7em;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.contact-line {
+  margin-top: 1.5rem;
+  color: var(--text);
+}
+
+.contact-line a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-line a:hover,
+.contact-line a:focus-visible {
+  text-decoration: underline;
+}
+
+.author-notes {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.paper-meta {
+  margin: 0 0 2.1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.collab h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-strong);
+}
+
+.logo-row {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-placeholder {
+  min-width: 140px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cta-buttons {
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 10px 20px -16px rgba(36, 76, 211, 0.55);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 26px -18px rgba(36, 76, 211, 0.6);
+}
+
+.btn.disabled {
+  background: #35406a;
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.content {
+  flex: 1;
+  padding: 0 1.5rem 3rem;
+}
+
+.section-block {
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(2rem, 5vw, 2.75rem) clamp(1.75rem, 5vw, 3rem);
+}
+
+.section-block h2 {
+  margin-top: 0;
+  color: var(--text-strong);
+  font-size: 1.75rem;
+}
+
+.section-block p {
+  margin: 1rem 0;
+}
+
+.highlight-grid,
+.results-grid,
+.faq-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.highlight-grid article {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(245, 247, 251, 0.8);
+}
+
+.highlight-grid h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text-strong);
+}
+
+.results-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.results-grid figure {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.result-thumb {
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  padding: 1.75rem;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  background: rgba(245, 247, 251, 0.7);
+}
+
+.results-grid figcaption {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.faq-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.faq-grid article {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(245, 247, 251, 0.8);
+}
+
+.faq-grid h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text-strong);
+  font-size: 1.05rem;
+}
+
+.code-block {
+  margin-top: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 14px;
+  background: #0b1733;
+  color: #f5f8ff;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  border: 1px solid #1c2a55;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .paper-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .logo-placeholder {
+    min-width: 120px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

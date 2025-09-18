@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MaskAttn-SDXL &mdash; CONTROLLABLE REGION-LEVEL TEXT-TO-IMAGE GENERATION</title>
+  <meta name="description" content="MaskAttn-SDXL">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap">
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead" id="top">
+      <div class="paper-card">
+        <h1 class="paper-title">MaskAttn-SDXL</h1>
+        <p class="paper-subtitle">CONTROLLABLE REGION-LEVEL TEXT-TO-IMAGE GENERATION</p>
+
+        <div class="author-list">
+          <span class="author"><span class="author-name">Yu Change</span><sup>1*</sup></span>
+          <span class="author"><span class="author-name">Jiahao Chen</span><sup>2*</sup></span>
+          <span class="author"><span class="author-name">Anzhe Cheng</span><sup>3</sup></span>
+          <span class="author"><span class="author-name">Paul Bogdan</span><sup>3</sup></span>
+        </div>
+
+        <div class="affiliation-list">
+          <span><sup>1</sup>The University of British Columbia, Vancouver, Canada</span>
+          <span><sup>2</sup>University of Toronto, Toronto, Canada</span>
+          <span><sup>3</sup>University of Southern California, Los Angeles, USA</span>
+        </div>
+
+        <p class="author-notes"><sup>*</sup>Equal contribution &nbsp; &sdot;&nbsp;
+
+  
+
+        <div class="cta-buttons">
+          <a class="btn" href="paper/MaskAttn-SDXL.pdf" target="_blank" rel="noopener">Paper</a>
+          <span class="btn disabled" aria-disabled="true">Code (Coming Soon)</span>
+          <a class="btn" href="#bibtex">BibTeX</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section id="overview" class="section-block">
+        <h2>Overview</h2>
+        <p>Text-to-image diffusion models achieve impressive realism but often fail under compositional prompts with multiple objects, attributes, and spatial relations, 
+          leading to cross-token interference where entities entangle, attributes bleed across objects, and spatial cues are violated. We propose Mask-Attn SDXL, 
+          a cross-attention gating mechanism that injects a learnable binary mask directly into the attention logits of SDXL's U-Net. The mask is estimated per token and per layer, 
+          sparsifying text-to-image routing so that only semantically relevant token-to-latent channels remain active. The method requires no positional encodings, auxiliary tokens, 
+          or external region masks, and preserves the original inference path with negligible overhead. Fine-tuning on a subset of COCO captions yields measurable improvements 
+          in spatial compliance and attribute binding on multi-object prompts while maintaining overall image quality and sample diversity. These results indicate that logit-level 
+          masked cross-attention is a simple, data-efficient primitive for stronger disentanglement and boundary fidelity in text-to-image generation, and a complementary building 
+          block for future spatially controllable systems.</p>
+        
+      </section>
+
+    
+
+      <section id="bibtex" class="section-block">
+        <h2>BibTeX</h2>
+        <pre class="code-block">@article{maskattn_sdxl,
+  title={MASK-ATTN SDXL: Controllable region_level text-to-image generation},
+  author={Yu Change and Jiahao Chen and Anzhe Cheng and Paul Bogdan},
+  year={2025}
+}
+</pre>
+      
+    </main>
+
+    <footer class="footer">
+      <div>MaskAttn-SDXL &copy; 2025</div>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+</body>
+</html>
